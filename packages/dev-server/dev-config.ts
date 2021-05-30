@@ -174,11 +174,11 @@ function getDbConfig(): ConnectionOptions {
             console.log('Using mysql connection');
             return {
                 synchronize: true,
-                type: 'mariadb',
-                host: '127.0.0.1',
+                type: 'mysql',
+                host: process.env["DEV_DB_HOST"] || '127.0.0.1',
                 port: 3306,
-                username: 'root',
-                password: '',
+                username: process.env["DEV_DB_USER"] || 'root',
+                password: process.env["DEV_DB_PASSWORD"] || '',
                 database: 'vendure-dev',
             };
     }
