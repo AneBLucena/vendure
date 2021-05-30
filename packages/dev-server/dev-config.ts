@@ -152,7 +152,7 @@ function getDbConfig(): ConnectionOptions {
                 port: 5432,
                 username: 'admin',
                 password: 'secret',
-                database: 'vendure-dev',
+                database: 'vendure_dev',
             };
         case 'sqlite':
             console.log('Using sqlite connection');
@@ -179,7 +179,7 @@ function getDbConfig(): ConnectionOptions {
                 port: 3306,
                 username: process.env["DEV_DB_USER"] || 'root',
                 password: process.env["DEV_DB_PASSWORD"] || '',
-                database: 'vendure-dev',
+                database: 'vendure_dev',
             };
     }
 }
